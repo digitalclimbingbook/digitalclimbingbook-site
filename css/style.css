@@ -143,6 +143,21 @@ img { max-width: 100%; display: block; }
   color: #48484A;
   font-weight: 500;
 }
+/* Screenshot image inside phone */
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 33px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.feature-phone .phone-screen {
+  border-radius: 27px;
+}
+
 /* Notch */
 .phone-mockup::before {
   content: '';

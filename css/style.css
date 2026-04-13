@@ -68,9 +68,10 @@ img { max-width: 100%; display: block; }
   position: absolute;
   bottom: -80px; left: -60px;
   width: 500px; height: 500px;
-  background: url('../img/icon-rock-transparent.png') no-repeat center / contain;
+  background: url('../img/bear-mascot.png') no-repeat center / contain;
   opacity: 0.035;
   pointer-events: none;
+  z-index: 0;
 }
 .hero-content {
   max-width: 1100px;
@@ -126,12 +127,12 @@ img { max-width: 100%; display: block; }
 }
 .hero-cta:hover { border-color: #48484A; opacity: 1; }
 .hero-cta svg { opacity: 0.6; }
-.hero-phone { flex-shrink: 0; }
+.hero-phone { flex-shrink: 0; position: relative; z-index: 2; }
 
 /* ===== PHONE MOCKUP ===== */
 .phone-mockup {
   width: 260px;
-  height: 526px;
+  height: 540px;
   background: #110f12;
   border-radius: 36px;
   border: 3px solid #2C2C2E;
@@ -167,6 +168,45 @@ img { max-width: 100%; display: block; }
   border-radius: 27px;
 }
 
+/* Phone Status Bar */
+.phone-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  background: #110f12;
+  border-radius: 33px 33px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 24px 0;
+  z-index: 3;
+}
+.feature-phone .phone-status-bar {
+  height: 46px;
+  border-radius: 27px 27px 0 0;
+  padding: 14px 20px 0;
+}
+.status-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  letter-spacing: 0.2px;
+}
+.feature-phone .status-time {
+  font-size: 12px;
+}
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.feature-phone .status-icons svg {
+  transform: scale(0.85);
+}
+
 /* Notch */
 .phone-mockup::before {
   content: '';
@@ -178,6 +218,20 @@ img { max-width: 100%; display: block; }
   height: 28px;
   background: #0F0F0F;
   border-radius: 14px;
+  z-index: 4;
+}
+/* Bottom home indicator bar */
+.phone-mockup::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: #48484A;
+  border-radius: 2px;
+  z-index: 4;
 }
 
 /* ===== FEATURE SECTIONS ===== */
@@ -235,10 +289,10 @@ img { max-width: 100%; display: block; }
   line-height: 1.65;
   max-width: 440px;
 }
-.feature-phone { flex-shrink: 0; }
+.feature-phone { flex-shrink: 0; position: relative; z-index: 2; }
 .feature-phone .phone-mockup {
   width: 220px;
-  height: 446px;
+  height: 460px;
   border-radius: 30px;
 }
 .feature-phone .phone-mockup::before {

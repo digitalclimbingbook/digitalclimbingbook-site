@@ -63,6 +63,15 @@ img { max-width: 100%; display: block; }
   background: radial-gradient(circle, rgba(232, 85, 58, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -60px;
+  width: 500px; height: 500px;
+  background: url('../img/icon-rock-transparent.png') no-repeat center / contain;
+  opacity: 0.035;
+  pointer-events: none;
+}
 .hero-content {
   max-width: 1100px;
   width: 100%;
@@ -122,7 +131,7 @@ img { max-width: 100%; display: block; }
 /* ===== PHONE MOCKUP ===== */
 .phone-mockup {
   width: 260px;
-  height: 540px;
+  height: 526px;
   background: #110f12;
   border-radius: 36px;
   border: 3px solid #2C2C2E;
@@ -229,7 +238,7 @@ img { max-width: 100%; display: block; }
 .feature-phone { flex-shrink: 0; }
 .feature-phone .phone-mockup {
   width: 220px;
-  height: 460px;
+  height: 446px;
   border-radius: 30px;
 }
 .feature-phone .phone-mockup::before {

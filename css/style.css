@@ -68,7 +68,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   bottom: -80px; left: -60px;
   width: 500px; height: 500px;
-  background: url('../img/bear-mascot-light.png') no-repeat center / contain;
+  background: url('img/bear-mascot-light.png') no-repeat center / contain;
   opacity: 0.06;
   pointer-events: none;
   z-index: 0;

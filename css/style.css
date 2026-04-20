@@ -19,7 +19,7 @@ img { max-width: 100%; display: block; }
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 16px 32px;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(15, 15, 15, 0.85);
@@ -111,6 +111,13 @@ img { max-width: 100%; display: block; }
   margin-bottom: 36px;
   max-width: 460px;
 }
+
+/* Hero CTA Group */
+.hero-cta-group {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .hero-cta {
   display: inline-flex;
   align-items: center;
@@ -123,10 +130,29 @@ img { max-width: 100%; display: block; }
   font-size: 15px;
   font-weight: 600;
   cursor: default;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, opacity 0.2s;
 }
-.hero-cta:hover { border-color: #48484A; opacity: 1; }
 .hero-cta svg { opacity: 0.6; }
+
+/* Log In button — active, clickable, accent */
+.hero-cta-login {
+  background: #E8553A;
+  border-color: #E8553A;
+  color: #FFF;
+  cursor: pointer;
+}
+.hero-cta-login svg { opacity: 1; }
+.hero-cta-login:hover {
+  opacity: 0.9;
+  color: #FFF;
+}
+
+/* Coming Soon on iOS — greyed out */
+.hero-cta-ios {
+  cursor: default;
+}
+.hero-cta-ios:hover { border-color: #48484A; opacity: 1; }
+
 .hero-phone { flex-shrink: 0; position: relative; z-index: 2; }
 
 /* ===== PHONE MOCKUP ===== */
@@ -454,6 +480,7 @@ img { max-width: 100%; display: block; }
   .hero-title { font-size: 36px; letter-spacing: -1px; }
   .hero-subtitle { font-size: 17px; margin: 0 auto 32px; }
   .hero-badge { margin-bottom: 20px; }
+  .hero-cta-group { align-items: center; }
 
   .features { padding: 0 20px; }
   .feature-section {
